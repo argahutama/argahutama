@@ -1,4 +1,4 @@
-👋 Hi, I'm Arga Hutama, an Android Developer at Oddy Oto Inovasi
+👋 Hi, I'm Arga Hutama, Android Developer at OKHome Indonesia
 
 [![Linkedin Badge](https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahutama)](https://www.linkedin.com/in/argahut/)<br/>
 [![Gmail Badge](https://img.shields.io/badge/-argahut@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:argahut@gmail.com)](mailto:argahut@gmail.com)<br/>

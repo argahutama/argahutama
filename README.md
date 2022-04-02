@@ -2,7 +2,6 @@
 
 [![Linkedin Badge](https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahutama)](https://www.linkedin.com/in/argahut/)<br/>
 [![Gmail Badge](https://img.shields.io/badge/-argahut@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:argahut@gmail.com)](mailto:argahut@gmail.com)<br/>
-[![Whatsapp Badge](https://img.shields.io/badge/+6289509509444-25D366?&style=for-the-badge&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?phone=6289509509444&text=Halo%20Arga!)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Languages & Tools

@@ -1,4 +1,4 @@
-<img align="right" alt="GIF" width="200px" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
+<img align="right" alt="GIF" width="300px" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
 
 Hi <img src="/assets/hi.gif" width="25px" /> I'm Arga,
 a Senior Android Engineer at Zenius Education.

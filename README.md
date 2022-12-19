@@ -12,10 +12,9 @@
 <img align="left" alt="Swift" width="26px" src="https://cdn.worldvectorlogo.com/logos/swift-15.svg" />
 <img align="left" alt="Java" width="16px" height="26px" src="https://seeklogo.com/images/J/java-logo-7833D1D21A-seeklogo.com.png" />
 <br/><br/>
+<img align="left" alt="Golang" width="26px" src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" />
 <img align="left" alt="Firebase" width="26px" src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png?hl=id"/>
-<img align="left" alt="MySQL" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" />
 <img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
-<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
 
 <br/>
 <br/>

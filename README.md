@@ -1,14 +1,18 @@
-<img align="right" alt="GIF" width="400px" src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" />
+<h1 align="center">Hi <img src="/assets/hi.gif" width="25px" /> I'm Arga</h1>
+<p align="center">A Senior Software Engineer at Zenius Education</p>
 
-Hi <img src="/assets/hi.gif" width="25px" /> I'm Arga,
-a Senior Software Engineer at Zenius Education.
+<p align="center">
+  <a href="https://www.linkedin.com/in/argahutama"><img src="https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahutama" alt="LinkedIn"></a>
+  <a href="mailto:argahut@gmail.com"><img src="https://img.shields.io/badge/-argahut%40gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white" alt="Gmail"></a>
+</p>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahutama)](https://www.linkedin.com/in/argahut/)<br/>
-[![Gmail Badge](https://img.shields.io/badge/-argahut@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:argahut@gmail.com)](mailto:argahut@gmail.com)<br/>
+<p align="center"><img src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" width="400px"></p>
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### GitHub Analytics
-<a href="https://github.com/argahutama">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=argahutama&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=argahutama&layout=compact&langs_count=8&theme=algolia&include_all_commits=true&count_private=true"/>
-</a>
+---
+
+<h2 align="center">GitHub Analytics</h2>
+
+<p align="center">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=argahutama&show_icons=true&theme=algolia&include_all_commits=true&count_private=true">
+  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=argahutama&layout=compact&langs_count=8&theme=algolia&include_all_commits=true&count_private=true">
+</p>

@@ -2,7 +2,7 @@
 <p align="center">A Senior Software Engineer at Zenius Education</p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/argahutama"><img src="https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahutama" alt="LinkedIn"></a>
+  <a href="https://www.linkedin.com/in/argahutama"><img src="https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahut" alt="LinkedIn"></a>
   <a href="mailto:argahut@gmail.com"><img src="https://img.shields.io/badge/-argahut%40gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white" alt="Gmail"></a>
 </p>
 

@@ -1,5 +1,5 @@
 <h1 align="center">Hi <img src="/assets/hi.gif" width="25px" /> I'm Arga</h1>
-<p align="center">A Senior Software Engineer at Zenius Education</p>
+<p align="center">A Senior Android Developer at GetPlus (Djarum Group)</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/argahut"><img src="https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/argahut" alt="LinkedIn"></a>

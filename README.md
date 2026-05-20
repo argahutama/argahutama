@@ -1,7 +1,8 @@
 <h1 align="center">Hey, I'm Arga <img src="/assets/hi.gif" width="25px" /></h1>
 
-<p align="center">Android Engineer at Gojek, based in Indonesia.</p>
-<p align="center">5+ years building mobile apps. My rubber duck debugger has heard things.</p>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&color=1CA0F1&center=true&vCenter=true&width=500&lines=Senior+Android+Engineer+%40+Gojek;Kotlin+%7C+KMP+%7C+Jetpack+Compose+%7C+Flutter" alt="Typing animation">
+</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/argahut"><img src="https://img.shields.io/badge/-Arga_Hutama-1ca0f1?style=flat-square&logo=Linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -20,6 +21,8 @@
   <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
   <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart">
   <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Gradle-02303A?style=flat-square&logo=gradle&logoColor=white" alt="Gradle">
+  <img src="https://img.shields.io/badge/CI%2FCD-555555?style=flat-square&logoColor=white" alt="CI/CD">
 </p>
 
 ---

@@ -30,6 +30,13 @@
 <h2 align="center">Popular Repositories</h2>
 
 <!-- TOP_REPOS_START -->
+<p align="center">
+  <a href="https://github.com/argahutama/android-viewbinding-bazel"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argahutama&repo=android-viewbinding-bazel&theme=algolia" alt="android-viewbinding-bazel"></a>
+  <a href="https://github.com/argahutama/ComposePlayground"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argahutama&repo=ComposePlayground&theme=algolia" alt="ComposePlayground"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/argahutama/FlutterMovieApp"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argahutama&repo=FlutterMovieApp&theme=algolia" alt="FlutterMovieApp"></a>
+</p>
 <!-- TOP_REPOS_END -->
 
 ---

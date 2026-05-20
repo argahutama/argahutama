@@ -30,44 +30,7 @@
 <h2 align="center">Popular Repositories</h2>
 
 <!-- TOP_REPOS_START -->
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-  <h4><a href="https://github.com/argahutama/android-viewbinding-bazel">android-viewbinding-bazel</a></h4>
-  <p></p>
-  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p>
-</td>
-<td width="50%" valign="top">
-  <h4><a href="https://github.com/argahutama/ComposePlayground">ComposePlayground</a></h4>
-  <p></p>
-  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-  <h4><a href="https://github.com/argahutama/FlutterMovieApp">FlutterMovieApp</a></h4>
-  <p></p>
-  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logoColor=white" alt="Dart"></p>
-</td>
-<td width="50%" valign="top">
-  <h4><a href="https://github.com/argahutama/kotlin-springboot-playground">kotlin-springboot-playground</a></h4>
-  <p></p>
-  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-  <h4><a href="https://github.com/argahutama/flutter_cubit_playground">flutter_cubit_playground</a></h4>
-  <p></p>
-  <p>⭐ 3 &nbsp; <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logoColor=white" alt="Dart"></p>
-</td>
-<td width="50%" valign="top">
-  <h4><a href="https://github.com/argahutama/GameCatalogCorePackage">GameCatalogCorePackage</a></h4>
-  <p></p>
-  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logoColor=white" alt="Swift"></p>
-</td>
-</tr>
-</table>
+<p align="center"><table width="100%"><tr><td align="center" width="50%" valign="top"><a href="https://github.com/grab/grazel"><b>grab/grazel</b></a><br><sub>A tool to migrate Android projects from Gradle to Bazel incrementally and automatically</sub><br><br><img src="https://img.shields.io/badge/★%20298-FFC83D?style=flat-square&logoColor=black" alt="stars"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></td><td align="center" width="50%" valign="top"><a href="https://github.com/bazelbuild/rules_android"><b>bazelbuild/rules_android</b></a><br><sub>Android rules for Bazel</sub><br><br><img src="https://img.shields.io/badge/★%20197-FFC83D?style=flat-square&logoColor=black" alt="stars"> <img src="https://img.shields.io/badge/Java-b07219?style=flat-square&logoColor=white" alt="Java"></td></tr></table></p>
 <!-- TOP_REPOS_END -->
 
 ---

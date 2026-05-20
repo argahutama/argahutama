@@ -6,8 +6,8 @@ import urllib.request
 USERNAME = "argahutama"
 MIN_STARS = 10
 README_PATH = "README.md"
-MARKER_START = "<!-- TOP_REPOS_START -->"
-MARKER_END = "<!-- TOP_REPOS_END -->"
+MARKER_START = "<!-- CONTRIBUTIONS_START -->"
+MARKER_END = "<!-- CONTRIBUTIONS_END -->"
 MAIN_BRANCHES = {"main", "master"}
 
 LANGUAGE_COLORS = {
@@ -136,7 +136,9 @@ def build_cards(repos):
     pairs = [repos[i:i+2] for i in range(0, len(repos), 2)]
 
     for pair in pairs:
-        cells = []
+        top_cells = []
+        bottom_cells = []
+
         for repo in pair:
             name = repo["nameWithOwner"]
             url = repo["url"]
@@ -146,27 +148,34 @@ def build_cards(repos):
             badges = " ".join(filter(None, [star_badge(stars), lang_badge(language)]))
             desc_line = f"<p align='center'><sub>{description}</sub></p>" if description else ""
 
-            cell = (
+            top_cells.append(
                 f"<td width='50%' valign='top'>"
                 f"<p align='center'><a href='{url}'><b>{name}</b></a></p>"
                 f"{desc_line}"
+                f"</td>"
+            )
+            bottom_cells.append(
+                f"<td width='50%' valign='bottom'>"
                 f"<p align='center'>{badges}</p>"
                 f"</td>"
             )
-            cells.append(cell)
 
-        if len(cells) == 1:
-            cells.append("<td width='50%'></td>")
+        if len(top_cells) == 1:
+            top_cells.append("<td width='50%'></td>")
+            bottom_cells.append("<td width='50%'></td>")
 
-        rows.append("<tr>" + "".join(cells) + "</tr>")
+        rows.append("<tr>" + "".join(top_cells) + "</tr>")
+        rows.append("<tr>" + "".join(bottom_cells) + "</tr>")
 
     table = (
+        "\n---\n"
         "<h2 align='center'>Open Source Contributions</h2>"
         "<div align='center'>"
         "<table><tbody>"
         + "".join(rows)
         + "</tbody></table>"
         "</div>"
+        "\n\n---\n"
     )
     return "\n" + table + "\n"
 

@@ -2,7 +2,7 @@ name: Update Popular Repositories
 
 on:
   schedule:
-    - cron: '0 0 * * *' # runs daily at midnight UTC
+    - cron: '0 0 * * 0' # runs every Sunday at midnight UTC
   workflow_dispatch: # allows manual trigger from GitHub UI
 
 jobs:

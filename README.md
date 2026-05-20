@@ -25,13 +25,8 @@
   <img src="https://img.shields.io/badge/CI%2FCD-555555?style=flat-square&logoColor=white" alt="CI/CD">
 </p>
 
----
-
-<!-- TOP_REPOS_START -->
-<h2 align='center'>Open Source Contributions</h2><div align='center'><table><tbody><tr><td width='50%' valign='top'><p align='center'><a href='https://github.com/grab/grazel'><b>grab/grazel</b></a></p><p align='center'><sub>A tool to migrate Android projects from Gradle to Bazel incrementally and automatically</sub></p><p align='center'><img src="https://img.shields.io/badge/★%20298-FFC83D?style=flat-square&logoColor=black" alt="stars"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p></td><td width='50%' valign='top'><p align='center'><a href='https://github.com/Meruya-Technology/network_inspector'><b>Meruya-Technology/network_inspector</b></a></p><p align='center'><sub>Flutter network inspector package</sub></p><p align='center'><img src="https://img.shields.io/badge/★%2014-FFC83D?style=flat-square&logoColor=black" alt="stars"> <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logoColor=white" alt="Dart"></p></td></tr></tbody></table></div>
-<!-- TOP_REPOS_END -->
-
----
+<!-- CONTRIBUTIONS_START -->
+<!-- CONTRIBUTIONS_END -->
 
 <h2 align="center">Trophies</h2>
 

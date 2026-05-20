@@ -27,6 +27,13 @@
 
 ---
 
+<h2 align="center">Popular Repositories</h2>
+
+<!-- TOP_REPOS_START -->
+<!-- TOP_REPOS_END -->
+
+---
+
 <h2 align="center">Trophies</h2>
 
 <p align="center">

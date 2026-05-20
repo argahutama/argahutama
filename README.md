@@ -17,8 +17,17 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin">
   <img src="https://img.shields.io/badge/Kotlin%20Multiplatform-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin Multiplatform">
+  <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose">
   <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart">
   <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">
+</p>
+
+---
+
+<h2 align="center">Trophies</h2>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=argahutama&theme=algolia&no-frame=true&row=1&column=7" alt="GitHub Trophies">
 </p>
 
 ---
@@ -28,4 +37,10 @@
 <p align="center">
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=argahutama&show_icons=true&theme=algolia&include_all_commits=true&count_private=true">
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=argahutama&layout=compact&langs_count=8&theme=algolia&include_all_commits=true&count_private=true">
+</p>
+
+---
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=algolia" alt="Dev Quote">
 </p>

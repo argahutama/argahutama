@@ -4,7 +4,7 @@ import json
 import urllib.request
 
 USERNAME = "argahutama"
-TOP_N = 6
+MIN_STARS = 10
 README_PATH = "README.md"
 MARKER_START = "<!-- TOP_REPOS_START -->"
 MARKER_END = "<!-- TOP_REPOS_END -->"
@@ -37,18 +37,57 @@ LANGUAGE_COLORS = {
     "Svelte": "ff3e00",
 }
 
+GRAPHQL_QUERY = """
+query($username: String!) {
+  user(login: $username) {
+    repositoriesContributedTo(
+      first: 100
+      contributionTypes: [COMMIT, PULL_REQUEST]
+      includeUserRepositories: false
+    ) {
+      nodes {
+        nameWithOwner
+        url
+        description
+        stargazerCount
+        isPrivate
+        primaryLanguage {
+          name
+        }
+      }
+    }
+  }
+}
+"""
+
 token = os.environ.get("GITHUB_TOKEN", "")
 
-def fetch_repos():
-    url = f"https://api.github.com/users/{USERNAME}/repos?type=public&sort=stars&direction=desc&per_page=100"
-    req = urllib.request.Request(url, headers={
-        "Authorization": f"Bearer {token}",
-        "Accept": "application/vnd.github.v3+json",
-    })
-    with urllib.request.urlopen(req) as res:
-        repos = json.loads(res.read())
+def fetch_contributed_repos():
+    payload = json.dumps({
+        "query": GRAPHQL_QUERY,
+        "variables": {"username": USERNAME}
+    }).encode()
 
-    return [r for r in repos if not r["fork"]][:TOP_N]
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        }
+    )
+
+    with urllib.request.urlopen(req) as res:
+        data = json.loads(res.read())
+
+    nodes = data["data"]["user"]["repositoriesContributedTo"]["nodes"]
+
+    repos = [
+        r for r in nodes
+        if not r["isPrivate"] and r["stargazerCount"] > MIN_STARS
+    ]
+
+    return sorted(repos, key=lambda r: r["stargazerCount"], reverse=True)
 
 def lang_badge(language):
     if not language:
@@ -57,6 +96,9 @@ def lang_badge(language):
     label = language.replace(" ", "%20").replace("+", "%2B").replace("#", "%23")
     return f'<img src="https://img.shields.io/badge/{label}-{color}?style=flat-square&logoColor=white" alt="{language}">'
 
+def star_badge(count):
+    return f'<img src="https://img.shields.io/badge/★%20{count}-FFC83D?style=flat-square&logoColor=black" alt="stars">'
+
 def build_cards(repos):
     rows = []
     pairs = [repos[i:i+2] for i in range(0, len(repos), 2)]
@@ -64,27 +106,23 @@ def build_cards(repos):
     for pair in pairs:
         cells = []
         for repo in pair:
-            name = repo["name"]
-            url = repo["html_url"]
+            name = repo["nameWithOwner"]
+            url = repo["url"]
             description = repo.get("description") or ""
-            stars = repo.get("stargazers_count", 0)
-            language = repo.get("language", "")
-            badge = lang_badge(language)
+            stars = repo["stargazerCount"]
+            language = repo["primaryLanguage"]["name"] if repo.get("primaryLanguage") else ""
+            badges = " ".join(filter(None, [star_badge(stars), lang_badge(language)]))
+            desc_line = f"<br><sub>{description}</sub>" if description else ""
 
-            cell = f"""<td width="50%" valign="top">
-  <h4><a href="{url}">{name}</a></h4>
-  <p>{description}</p>
-  <p>⭐ {stars} &nbsp; {badge}</p>
-</td>"""
+            cell = f'<td align="center" width="50%" valign="top"><a href="{url}"><b>{name}</b></a>{desc_line}<br><br>{badges}</td>'
             cells.append(cell)
 
-        # pad with empty cell if odd number
         if len(cells) == 1:
             cells.append('<td width="50%"></td>')
 
-        rows.append("<tr>\n" + "\n".join(cells) + "\n</tr>")
+        rows.append("<tr>" + "".join(cells) + "</tr>")
 
-    table = '<table width="100%">\n' + "\n".join(rows) + "\n</table>"
+    table = '<p align="center"><table width="100%">' + "".join(rows) + "</table></p>"
     return "\n" + table + "\n"
 
 def update_readme(content):
@@ -104,9 +142,9 @@ def update_readme(content):
     print("README updated.")
 
 if __name__ == "__main__":
-    repos = fetch_repos()
+    repos = fetch_contributed_repos()
     if not repos:
-        print("No public repos found.")
+        print("No qualifying contributions found.")
     else:
         cards = build_cards(repos)
         update_readme(cards)

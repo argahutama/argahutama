@@ -27,10 +27,7 @@
 
 ---
 
-<h2 align="center">Popular Repositories</h2>
-
 <!-- TOP_REPOS_START -->
-<p align="center"><table width="100%"><tr><td align="center" width="50%" valign="top"><a href="https://github.com/grab/grazel"><b>grab/grazel</b></a><br><sub>A tool to migrate Android projects from Gradle to Bazel incrementally and automatically</sub><br><br><img src="https://img.shields.io/badge/★%20298-FFC83D?style=flat-square&logoColor=black" alt="stars"> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></td><td align="center" width="50%" valign="top"><a href="https://github.com/bazelbuild/rules_android"><b>bazelbuild/rules_android</b></a><br><sub>Android rules for Bazel</sub><br><br><img src="https://img.shields.io/badge/★%20197-FFC83D?style=flat-square&logoColor=black" alt="stars"> <img src="https://img.shields.io/badge/Java-b07219?style=flat-square&logoColor=white" alt="Java"></td></tr></table></p>
 <!-- TOP_REPOS_END -->
 
 ---

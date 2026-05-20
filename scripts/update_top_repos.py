@@ -8,6 +8,7 @@ MIN_STARS = 10
 README_PATH = "README.md"
 MARKER_START = "<!-- TOP_REPOS_START -->"
 MARKER_END = "<!-- TOP_REPOS_END -->"
+MAIN_BRANCHES = {"main", "master"}
 
 LANGUAGE_COLORS = {
     "Kotlin": "7F52FF",
@@ -38,21 +39,33 @@ LANGUAGE_COLORS = {
 }
 
 GRAPHQL_QUERY = """
-query($username: String!) {
+query($username: String!, $cursor: String) {
   user(login: $username) {
-    repositoriesContributedTo(
+    pullRequests(
       first: 100
-      contributionTypes: [COMMIT, PULL_REQUEST]
-      includeUserRepositories: false
+      after: $cursor
+      states: [MERGED]
+      orderBy: { field: CREATED_AT, direction: DESC }
     ) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       nodes {
-        nameWithOwner
-        url
-        description
-        stargazerCount
-        isPrivate
-        primaryLanguage {
-          name
+        baseRefName
+        repository {
+          nameWithOwner
+          url
+          description
+          stargazerCount
+          isPrivate
+          isArchived
+          owner {
+            login
+          }
+          primaryLanguage {
+            name
+          }
         }
       }
     }
@@ -62,12 +75,8 @@ query($username: String!) {
 
 token = os.environ.get("GITHUB_TOKEN", "")
 
-def fetch_contributed_repos():
-    payload = json.dumps({
-        "query": GRAPHQL_QUERY,
-        "variables": {"username": USERNAME}
-    }).encode()
-
+def graphql(query, variables):
+    payload = json.dumps({"query": query, "variables": variables}).encode()
     req = urllib.request.Request(
         "https://api.github.com/graphql",
         data=payload,
@@ -76,18 +85,41 @@ def fetch_contributed_repos():
             "Content-Type": "application/json",
         }
     )
-
     with urllib.request.urlopen(req) as res:
-        data = json.loads(res.read())
+        return json.loads(res.read())
 
-    nodes = data["data"]["user"]["repositoriesContributedTo"]["nodes"]
+def fetch_merged_prs():
+    seen = {}
+    cursor = None
 
-    repos = [
-        r for r in nodes
-        if not r["isPrivate"] and r["stargazerCount"] > MIN_STARS
-    ]
+    while True:
+        data = graphql(GRAPHQL_QUERY, {"username": USERNAME, "cursor": cursor})
+        prs = data["data"]["user"]["pullRequests"]
 
-    return sorted(repos, key=lambda r: r["stargazerCount"], reverse=True)
+        for pr in prs["nodes"]:
+            repo = pr["repository"]
+            name = repo["nameWithOwner"]
+
+            # only main/master, public, non-archived, and not user's own repo
+            if (
+                pr["baseRefName"] not in MAIN_BRANCHES
+                or repo["isPrivate"]
+                or repo["isArchived"]
+                or repo["owner"]["login"] == USERNAME
+                or repo["stargazerCount"] <= MIN_STARS
+            ):
+                continue
+
+            # keep highest star count per repo (deduplicate)
+            if name not in seen:
+                seen[name] = repo
+
+        page_info = prs["pageInfo"]
+        if not page_info["hasNextPage"]:
+            break
+        cursor = page_info["endCursor"]
+
+    return sorted(seen.values(), key=lambda r: r["stargazerCount"], reverse=True)
 
 def lang_badge(language):
     if not language:
@@ -112,17 +144,30 @@ def build_cards(repos):
             stars = repo["stargazerCount"]
             language = repo["primaryLanguage"]["name"] if repo.get("primaryLanguage") else ""
             badges = " ".join(filter(None, [star_badge(stars), lang_badge(language)]))
-            desc_line = f"<br><sub>{description}</sub>" if description else ""
+            desc_line = f"<p align='center'><sub>{description}</sub></p>" if description else ""
 
-            cell = f'<td align="center" width="50%" valign="top"><a href="{url}"><b>{name}</b></a>{desc_line}<br><br>{badges}</td>'
+            cell = (
+                f"<td width='50%' valign='top'>"
+                f"<p align='center'><a href='{url}'><b>{name}</b></a></p>"
+                f"{desc_line}"
+                f"<p align='center'>{badges}</p>"
+                f"</td>"
+            )
             cells.append(cell)
 
         if len(cells) == 1:
-            cells.append('<td width="50%"></td>')
+            cells.append("<td width='50%'></td>")
 
         rows.append("<tr>" + "".join(cells) + "</tr>")
 
-    table = '<p align="center"><table width="100%">' + "".join(rows) + "</table></p>"
+    table = (
+        "<h2 align='center'>Open Source Contributions</h2>"
+        "<div align='center'>"
+        "<table><tbody>"
+        + "".join(rows)
+        + "</tbody></table>"
+        "</div>"
+    )
     return "\n" + table + "\n"
 
 def update_readme(content):
@@ -142,7 +187,7 @@ def update_readme(content):
     print("README updated.")
 
 if __name__ == "__main__":
-    repos = fetch_contributed_repos()
+    repos = fetch_merged_prs()
     if not repos:
         print("No qualifying contributions found.")
     else:

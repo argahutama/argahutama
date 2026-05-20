@@ -30,13 +30,44 @@
 <h2 align="center">Popular Repositories</h2>
 
 <!-- TOP_REPOS_START -->
-<p align="center">
-  <a href="https://github.com/argahutama/android-viewbinding-bazel"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argahutama&repo=android-viewbinding-bazel&theme=algolia" alt="android-viewbinding-bazel"></a>
-  <a href="https://github.com/argahutama/ComposePlayground"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argahutama&repo=ComposePlayground&theme=algolia" alt="ComposePlayground"></a>
-</p>
-<p align="center">
-  <a href="https://github.com/argahutama/FlutterMovieApp"><img src="https://github-readme-stats.vercel.app/api/pin/?username=argahutama&repo=FlutterMovieApp&theme=algolia" alt="FlutterMovieApp"></a>
-</p>
+<table width="100%">
+<tr>
+<td width="50%" valign="top">
+  <h4><a href="https://github.com/argahutama/android-viewbinding-bazel">android-viewbinding-bazel</a></h4>
+  <p></p>
+  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p>
+</td>
+<td width="50%" valign="top">
+  <h4><a href="https://github.com/argahutama/ComposePlayground">ComposePlayground</a></h4>
+  <p></p>
+  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+  <h4><a href="https://github.com/argahutama/FlutterMovieApp">FlutterMovieApp</a></h4>
+  <p></p>
+  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logoColor=white" alt="Dart"></p>
+</td>
+<td width="50%" valign="top">
+  <h4><a href="https://github.com/argahutama/kotlin-springboot-playground">kotlin-springboot-playground</a></h4>
+  <p></p>
+  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logoColor=white" alt="Kotlin"></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+  <h4><a href="https://github.com/argahutama/flutter_cubit_playground">flutter_cubit_playground</a></h4>
+  <p></p>
+  <p>⭐ 3 &nbsp; <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logoColor=white" alt="Dart"></p>
+</td>
+<td width="50%" valign="top">
+  <h4><a href="https://github.com/argahutama/GameCatalogCorePackage">GameCatalogCorePackage</a></h4>
+  <p></p>
+  <p>⭐ 0 &nbsp; <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logoColor=white" alt="Swift"></p>
+</td>
+</tr>
+</table>
 <!-- TOP_REPOS_END -->
 
 ---

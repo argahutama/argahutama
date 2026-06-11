@@ -37,7 +37,7 @@
 <h2 align="center">Trophies</h2>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=argahutama&theme=algolia&no-frame=true&row=1&column=7" alt="GitHub Trophies">
+  <img src="https://github-profile-trophy-liard-delta.vercel.app/?username=argahutama&theme=algolia&no-frame=true&row=1&column=7" alt="GitHub Trophies">
 </p>
 
 ---

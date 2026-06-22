@@ -1,7 +1,7 @@
 <h1 align="center">Hey, I'm Arga <img src="/assets/hi.gif" width="25px" /></h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&color=1CA0F1&center=true&vCenter=true&width=500&lines=Senior+Android+Engineer+%40+Gojek;Kotlin+%7C+KMP+%7C+Jetpack+Compose+%7C+Flutter" alt="Typing animation">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&color=1CA0F1&center=true&vCenter=true&width=500&lines=Android+Engineer+%40+HungerStation;Kotlin+%7C+KMP+%7C+Jetpack+Compose+%7C+Flutter" alt="Typing animation">
 </p>
 
 <p align="center">
